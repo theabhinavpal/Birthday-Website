@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday</title>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Hero Section with Confetti Button -->
+  <section class="hero">
+    <h1>🎉 Happy Birthday <span2 id="name"></span2> 🎉</h1>
+
+    <p1 class="falling-text">
+      <span>As you step into a new year of your life, may it be filled with incredible moments and boundless opportunities. 🌟</span>
+      <span>Let every challenge push you towards greater achievements and every success be a stepping stone to the next big dream.</span>
+      <span>The future is yours to shape, and I have no doubt that you'll continue to shine brighter with each passing year.</span>
+      <span>Wishing you all the success, happiness, and prosperity in the world! 🌱✨</span>
+    </p1>
+    <div id="age-timer"><span id="age"></span></div>
+    <button onclick="launchBalloons()">Set the balloons free..!🎈</button>
+    <button onclick="toggleAudio()" id="audio-control-button">Play 🎶</button>
+  </section>
+
+  <audio id="birthday-tune" muted>
+    <source src="tune.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Image Gallery Carousel -->
+  <section class="gallery">
+    <h2>Memorable Moments</h2>
+    <div class="carousel">
+      <img src="image1.png" alt="Image 1">
+      <img src="image2.png" alt="Image 2">
+      <img src="image3.png" alt="Image 3">
+      <img src="image4.png" alt="Image 4">
+      <img src="image5.png" alt="Image 5">
+      <img src="image6.png" alt="Image 6">
+      <img src="image7.png" alt="Image 7">
+      <img src="image8.png" alt="Image 8">
+    </div>
+  </section>
+
+  <!-- Fun Facts Section -->
+  <section class="fun-facts">
+    <h2>Fun-Facts About You</h2>
+    <div class="fact-grid">
+      <div class="fact-card">Any fun facts about them</div>
+      <div class="fact-card">Any fun facts about them</div>
+      <div class="fact-card">Any fun facts about them</div>
+      <div class="fact-card">Any fun facts about them</div>
+      <div class="fact-card">Any fun facts about them</div>
+      <div class="fact-card">Any fun facts about them</div>
+      <div class="fact-card">Any fun facts about them</div>
+      <div class="fact-card">Any fun facts about them</div>
+      <div class="fact-card">Any fun facts about them</div>
+      <div class="fact-card">Any fun facts about them</div>
+      <div class="fact-card">Any fun facts about them</div>
+      <div class="fact-card">Any fun facts about them</div>
+      <div class="fact-card">Any fun facts about them</div>
+      <div class="fact-card">Any fun facts about them</div>
+    </div>
+  </section>
+
+  <!-- Shayaries Section -->
+  <section class="shayaries">
+    <h2>Poetic Expressions</h2>
+    <div class="shayaries-grid">
+      <div class="shayaries-card">On your Birthday, may your heart be light 💗, With Love all around, everything feels right 🧚🏼‍♂️.<br>Like a star in the sky, You Shine so Bright ★ <br>Happy Birthday to you, A true delight😎</div>
+      <div class="shayaries-card">With every candle on your cake 🎂✨, may your dreams come true 🌟,<br> You deserve the world 🌍💖, and so much more too.🎉🎁</div>
+      <div class="shayaries-card">On this special day of yours, let joy surround you ✨🎉,<br> May happiness be your constant companion 😊🌈, all year through. 🎂💖</div>
+      <div class="shayaries-card">A year older, a year wiser 🎉🎂, let the good times roll 🎊,<br> Celebrate this life of yours ✨🌸, it's beautiful and whole. 💖🌟</div>
+      <div class="shayaries-card">Wishing you sunshine ☀️, laughter, and a cake that's divine 🎂✨,<br> May your birthday be as lovely as a well-aged wine. 🍷🌟</div>
+      <div class="shayaries-card">Celebrate your life, let your spirit soar 😇, With love and blessing, May you have much More 🏵️.<br> Happy Birthday to you, may your wishes come True🧞‍♀️. </div>
+    </div>
+  </section>
+
+
+  <!-- Games Section -->
+<section class="games">
+  <h2>Let's Check Your IQ</h2>
+  <div class="game-grid">
+    <!-- First Question Card -->
+    <div class="game-item" onclick="flipCard(this)">
+      <div class="card">
+        <div class="front">
+          <p>Why don't skeletons fight each other?</p>
+        </div>
+        <div class="back">
+          <p>Answer: Because they don't have the guts!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Question Card -->
+    <div class="game-item" onclick="flipCard(this)">
+      <div class="card">
+        <div class="front">
+          <p>What do you get when you cross a snowman and a vampire?</p>
+        </div>
+        <div class="back">
+          <p>Answer: Frostbite!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third Question Card -->
+    <div class="game-item" onclick="flipCard(this)">
+      <div class="card">
+        <div class="front">
+          <p>Why did the scarecrow win an award?</p>
+        </div>
+        <div class="back">
+          <p>Answer: Because he was outstanding in his field!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fourth Question Card -->
+    <div class="game-item" onclick="flipCard(this)">
+      <div class="card">
+        <div class="front">
+          <p>How does a penguin build its house?</p>
+        </div>
+        <div class="back">
+          <p>Answer: Igloos it together!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fifth Question Card -->
+    <div class="game-item" onclick="flipCard(this)">
+      <div class="card">
+        <div class="front">
+          <p>What do you call fake spaghetti?</p>
+        </div>
+        <div class="back">
+          <p>Answer: An impasta!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sixth Question Card -->
+    <div class="game-item" onclick="flipCard(this)">
+      <div class="card">
+        <div class="front">
+          <p>Why was the math book sad?</p>
+        </div>
+        <div class="back">
+          <p>Answer: Because it had too many problems.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Seventh Question Card -->
+    <div class="game-item" onclick="flipCard(this)">
+      <div class="card">
+        <div class="front">
+          <p>How do you make a tissue dance?</p>
+        </div>
+        <div class="back">
+          <p>Answer: You put a little boogie in it!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Eighth Question Card -->
+    <div class="game-item" onclick="flipCard(this)">
+      <div class="card">
+        <div class="front">
+          <p>Why did the golfer bring an extra pair of pants?</p>
+        </div>
+        <div class="back">
+          <p>Answer: In case he got a hole in one!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ninth Question Card -->
+    <div class="game-item" onclick="flipCard(this)">
+      <div class="card">
+        <div class="front">
+          <p>What do you call cheese that isn't yours?</p>
+        </div>
+        <div class="back">
+          <p>Answer: Nacho cheese!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tenth Question Card -->
+    <div class="game-item" onclick="flipCard(this)">
+      <div class="card">
+        <div class="front">
+          <p>Why don't eggs tell jokes?</p>
+        </div>
+        <div class="back">
+          <p>Answer: Because they'd crack each other up!</p>
+        </div>
+      </div>
+    </div>
+
+  <!-- Eleventh Question Card -->
+<div class="game-item" onclick="flipCard(this)">
+  <div class="card">
+    <div class="front">
+      <p>Why don’t oysters donate to charity?</p>
+    </div>
+    <div class="back">
+      <p>Answer: Because they’re shellfish!</p>
+    </div>
+  </div>
+</div>
+
+<!-- Twelfth Question Card -->
+<div class="game-item" onclick="flipCard(this)">
+  <div class="card">
+    <div class="front">
+      <p>What do you call a dinosaur with an extensive vocabulary?</p>
+    </div>
+    <div class="back">
+      <p>Answer: A thesaurus!</p>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

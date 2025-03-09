@@ -1,0 +1,315 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(360deg,#6a9dd4 ,#f3301bc4);
+    color: #000000;
+    text-align: center;
+    overflow-x: hidden;
+    
+  }
+  
+  /* Hero Section */
+  .hero {
+    padding: 50px;
+    background-color: #36244f;
+  }
+  
+  .hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+    
+}
+
+h1 {
+    overflow: hidden;
+    border-right: .15em solid #ffcc00;
+    white-space: nowrap;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+    animation: typing 5s steps(144, end) forwards, blink-caret .75s step-end 5s; /* Stops caret blinking after typing */
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent; } /* Start and end with no caret */
+  50% { border-color: rgb(0, 255, 195); } /* Blinking effect */
+}
+
+span2{
+  color: rgb(0, 255, 195);
+}
+
+  .hero button {
+    display: inline-block;
+    height: 50px;
+    padding: 10px 20px;
+    font-size: 1.3em;
+    background-color: #1e7069;
+    color: #fff9f9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+  }
+  .hero button:hover {
+    background-color: #88a2bc;
+  }
+  
+/* Balloon styles */
+.balloon {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: 30px;
+  height: 40px;
+  border-radius: 50%;
+  opacity: 0.9;
+  box-shadow: inset -5px -5px 8px rgba(0, 0, 0, 0.2);
+  animation: burst 3s ease-out forwards;
+  display: block;
+}
+
+/* Balloon strings using ::before */
+.balloon::before {
+  content: '';
+  position: absolute;
+  top: 100%; /* Attach to the bottom of the balloon */
+  left: 50%;
+  width: 1px;
+  height: 40px;
+  background-color: #555; /* Color of the string */
+  transform: translateX(-50%); /* Center the string */
+}
+
+/* Balloon burst animation */
+@keyframes burst {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--x-move), var(--y-move)) scale(0.8);
+    opacity: 0;
+  }
+}
+
+  /* Image Carousel */
+  .gallery {
+    margin: 50px 0;
+  }
+  .carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 35px;
+    padding: 20px;
+    scroll-snap-type: x mandatory;
+    
+  }
+  .carousel img {
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    scroll-snap-align: center;
+    transform: scale(1);
+    transition: transform 0.3s
+  }
+  .carousel img:hover {
+    transform: scale(1.08);
+
+  }
+
+  .carousel::-webkit-scrollbar {
+    display: none; 
+  }
+  
+  /* Fun Facts Section */
+  .fun-facts {
+    padding: 50px 20px;
+  }
+  .fact-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  }
+  .fact-card {
+    padding: 20px;
+    background-color: #a7ecf2;
+    color: #000000;
+    align-content: center;
+    text-align: center;
+    border-radius: 5px;
+    transform: scale(1);
+    transition: transform 0.3s;
+  }
+  .fact-card:hover {
+    transform: scale(1.08);
+  }
+
+
+
+
+  /* shayaries */
+  .shayaries {
+    padding: 50px 20px;
+  }
+  .shayaries-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  }
+  .shayaries-card {
+    padding: 20px;
+    background-color:#a7ecf2;
+    color: black;
+    border-radius: 5px;
+    transform: scale(1);
+    transition: transform 0.3s;
+    text-align: justify;
+  }
+  .shayaries-card:hover {
+    transform: scale(1.08);
+  }
+
+
+/* Confetti base styling */
+.confetti {
+  position: absolute;
+  top: 0;  /* Start at the top */
+  width: 12px;  /* Increase size for visibility */
+  height: 12px;
+  opacity: 0.6;  /* Make confetti more visible */
+  animation: fall linear infinite;  /* Only the fall animation */
+  animation-duration: 5s;  /* Set the overall duration for falling */
+  animation-timing-function: linear;
+  
+}
+
+/* Falling animation */
+@keyframes fall {
+  0% {
+      transform: translateY(0);  /* Start from the top */
+  }
+  100% {
+      transform: translateY(250vh);  /* Fall to the bottom of the viewport */
+      opacity: 0.1;  /* Optional fade-out as it reaches bottom */
+  }
+}
+
+#age-timer {
+  font-size: 1.2em;
+  margin-top: 15px;
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+p1{
+  align-content: justify;
+  font-size: large;
+  font-style: oblique;
+  color: #a7ecf2;
+
+}
+/* Style for the falling text animation */
+.falling-text span {
+  display: block; /* Make each line of text a block */
+  opacity: 0; /* Start with hidden text */
+  transform: translateY(-50px); /* Start slightly above */
+  animation: fallIn 1s ease forwards;
+}
+
+.falling-text span:nth-child(1) { animation-delay: 0s; }
+.falling-text span:nth-child(2) { animation-delay: 0.5s; }
+.falling-text span:nth-child(3) { animation-delay: 1s; }
+.falling-text span:nth-child(4) { animation-delay: 1.5s; }
+
+/* Keyframes for falling and fading effect */
+@keyframes fallIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px); /* Text appears from above */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Text settles into place */
+  }
+}
+
+/* Game Section Styles */
+.games {
+  padding: 50px 20px;
+}
+
+.games h2 {
+  margin-bottom: 20px;
+  color: #020000;
+}
+
+.game-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.game-item {
+  perspective: 1000px; /* Gives a 3D effect to the flip */
+}
+
+.card {
+  width: 100%;
+  height: 200px;
+  background-color: #dafe10;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.card .front,
+.card .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: justify;
+  align-items: center;
+  border-radius: 10px;
+  backface-visibility: hidden;
+}
+
+.card .front {
+  background-color: #a7ecf2;
+  color: #333;
+}
+
+.card .back {
+  background-color: #4caf50;
+  color: #fff;
+  transform: rotateY(180deg);
+}
+
+/* Hover effect: flip the card */
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+p{
+  color: #000000;
+  text-align: center;
+  padding: 20px;
+}
+
+
+
+
+
+
