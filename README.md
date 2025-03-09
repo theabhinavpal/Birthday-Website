@@ -1,6 +1,3 @@
-Here is a **README** file for your **Birthday Website** based on the provided code:  
-
----
 
 # 🎉 Birthday Website 🎂  
 
@@ -53,7 +50,3 @@ Feel free to fork the repo and submit pull requests for improvements!
 
 ## 📜 License  
 This project is open-source under the **MIT License**.  
-
----
-
-Let me know if you need any modifications! 🎂🎉
